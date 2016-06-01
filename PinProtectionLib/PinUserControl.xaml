@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="PinProtectionLib.PinUserControl">
+	<ContentView.Resources>
+    <ResourceDictionary>	   
+	     <Style x:Key="ButtonStyle"  TargetType="Button">
+	    <Setter Property="BackgroundColor" Value="#EFEFEF"/>
+        <Setter Property="BorderRadius" Value="6"/>
+        <Setter Property="HeightRequest" Value="64"/>
+        <Setter Property="WidthRequest" Value="64"/>   
+         <Setter Property="BorderWidth" Value="0.5"/>
+         <Setter Property="FontSize" Value="20"/>
+	    </Style>
+    </ResourceDictionary>
+    </ContentView.Resources>
+	<ContentView.Content>
+	  <Grid HorizontalOptions="CenterAndExpand"  VerticalOptions="CenterAndExpand" Padding="0,0,0,0" ColumnSpacing="25" RowSpacing="18">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />  
+        <ColumnDefinition Width="*" /> 
+        <ColumnDefinition Width="*" />      
+      </Grid.ColumnDefinitions>
+       
+        <Label x:Name="lblTitle" Text="{Binding TitleLabel}"  HorizontalOptions="CenterAndExpand"  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" FontSize="22"/>	
+        <Frame Grid.Column="0"  OutlineColor="White" Padding="20 5 20 5" x:Name="EntryFrame"  Grid.ColumnSpan="3" Grid.Row="1" BackgroundColor="Transparent"> 
+	<Entry  x:Name="entPassword"  IsPassword = "true"  Text="{Binding DisplayText , Mode=TwoWay}" MinimumHeightRequest="80"   HorizontalOptions="FillAndExpand" Grid.Column="0" Keyboard="Numeric"  IsEnabled="false"/> 
+	   </Frame>  
+      <Button x:Name="Btn1" Text="{Binding Btntext1}" Style="{StaticResource ButtonStyle}" TextColor="{Binding TextColors}"  HorizontalOptions="Center"   Grid.Column="0" Grid.Row="2" />
+
+      <Button x:Name="Btn2" Text="{Binding Btntext2}" TextColor="{Binding TextColors}"  Style="{StaticResource ButtonStyle}"  HorizontalOptions="Center"  Grid.Column="1" Grid.Row="2"
+              />
+
+      <Button x:Name="Btn3" Text="{Binding Btntext3}" Style="{StaticResource ButtonStyle}"  TextColor="{Binding TextColors}"  HorizontalOptions="Center"  Grid.Column="2" Grid.Row="2"/>
+     
+      <Button x:Name="Btn4" Text="{Binding Btntext4}"
+              Grid.Row="3" Grid.Column="0"  Style="{StaticResource ButtonStyle}" TextColor="{Binding TextColors}"  HorizontalOptions="Center"/>
+
+      <Button x:Name="Btn5" Text="{Binding Btntext5}" Grid.Row="3" Grid.Column="1"  Style="{StaticResource ButtonStyle}" TextColor="{Binding TextColors}"  HorizontalOptions="Center"/>
+
+      <Button x:Name="Btn6" Text="{Binding Btntext6}" Grid.Row="3" Grid.Column="2"  Style="{StaticResource ButtonStyle}" TextColor="{Binding TextColors}"  HorizontalOptions="Center"/>
+   
+
+      <Button x:Name="Btn7" Text="{Binding Btntext7}" Grid.Row="4" Grid.Column="0"  Style="{StaticResource ButtonStyle}" TextColor="{Binding TextColors}"  HorizontalOptions="Center"/>
+
+      <Button x:Name="Btn8" Text="{Binding Btntext8}" Grid.Row="4" Grid.Column="1"  Style="{StaticResource ButtonStyle}" TextColor="{Binding TextColors}"  HorizontalOptions="Center"/>
+
+      <Button x:Name="Btn9" Text="{Binding Btntext9}" Grid.Row="4" Grid.Column="2"  Style="{StaticResource ButtonStyle}" TextColor="{Binding TextColors}"  HorizontalOptions="Center"/>
+           
+
+      <Button x:Name="BtnForgotPIN" BackgroundColor="Transparent"  Grid.Row="6" Grid.Column="0"    HorizontalOptions="Center" VerticalOptions="End" />
+
+      <Button  x:Name="Btn0" Text="{Binding Btntext0}" TextColor="{Binding TextColors}" Grid.Row="5" Grid.Column="1"  Style="{StaticResource ButtonStyle}"  HorizontalOptions="Center"/>
+
+<!--      <Button  x:Name="BtnOk" Text="{Binding BtnTextOk}"  TextColor="{Binding TextColors}" Grid.Row="5" Grid.Column="2"  Style="{StaticResource ButtonStyle}"  HorizontalOptions="Center"/>-->
+           
+      <Button x:Name="BtnDelete"  BackgroundColor="Transparent"   Grid.Row="6" Grid.Column="2"   HorizontalOptions="Center" VerticalOptions="End"/>          
+    
+    </Grid>
+	</ContentView.Content>
+</ContentView>
